@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Powerups/DoubleJumpPu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Structures/Floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Structures/Wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Powerups/HorizontalPU.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Level3.gd" type="Script" id=7]
+
+[node name="Level3" type="Spatial"]
+script = ExtResource( 7 )
+
+[node name="Floor" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 2.51069, 9.39116 )
+
+[node name="DoubleJumpPu" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.93816, 1.70551, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 7.98059, 25.6358 )
+light_energy = 0.5
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.31066, 24.7167 )
+light_energy = 0.5
+
+[node name="DirectionalLight3" type="DirectionalLight" parent="."]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0, 5.31066, 24.7167 )
+light_energy = 0.5
+
+[node name="Goal" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.559077, 8.1074, -3.41904 )
+
+[node name="HorizontalPU" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.73366, 1.61825, 4.79563 )
+
+[node name="Wall" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.99481, 0.977981, -3.42792 )
+
+[node name="Wall2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 5, 0, 0, 0, 2, 0.590959, 2.5293, -2.8107 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.915107, 0.0891865, -0.393223, 0, 0.975231, 0.221191, 0.40321, -0.202414, 0.892441, -9.74799, 11.6784, 10.6294 )

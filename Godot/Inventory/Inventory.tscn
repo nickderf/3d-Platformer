@@ -1,0 +1,183 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://IMAGES/INV_OUTLINE.png" type="Texture" id=1]
+[ext_resource path="res://IMAGES/Goal.PNG" type="Texture" id=2]
+[ext_resource path="res://Inventory/Number.gd" type="Script" id=3]
+[ext_resource path="res://Inventory/Inventory.gd" type="Script" id=4]
+
+[node name="GUI" type="MarginContainer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -146.0
+margin_top = -120.0
+margin_right = 146.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 272.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+
+[node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 248.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+
+[node name="Bar" type="HBoxContainer" parent="HBoxContainer/Bars"]
+margin_right = 248.0
+margin_bottom = 80.0
+
+[node name="Space1" type="MarginContainer" parent="HBoxContainer/Bars/Bar"]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Background" type="NinePatchRect" parent="HBoxContainer/Bars/Bar/Space1"]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+
+[node name="Title" type="TextureRect" parent="HBoxContainer/Bars/Bar/Space1/Background"]
+margin_right = 80.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HBoxContainer/Bars/Bar/Space1/Background"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -10.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 10, 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedOutline" type="TextureRect" parent="HBoxContainer/Bars/Bar/Space1/Background"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.0
+margin_top = -41.0
+margin_right = 41.0
+margin_bottom = 41.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Space2" type="MarginContainer" parent="HBoxContainer/Bars/Bar"]
+margin_left = 84.0
+margin_right = 164.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Background" type="NinePatchRect" parent="HBoxContainer/Bars/Bar/Space2"]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+
+[node name="Title" type="TextureRect" parent="HBoxContainer/Bars/Bar/Space2/Background"]
+margin_right = 80.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HBoxContainer/Bars/Bar/Space2/Background"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -10.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 10, 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedOutline" type="TextureRect" parent="HBoxContainer/Bars/Bar/Space2/Background"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.0
+margin_top = -41.0
+margin_right = 41.0
+margin_bottom = 41.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Space3" type="MarginContainer" parent="HBoxContainer/Bars/Bar"]
+margin_left = 168.0
+margin_right = 248.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Background" type="NinePatchRect" parent="HBoxContainer/Bars/Bar/Space3"]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+
+[node name="Title" type="TextureRect" parent="HBoxContainer/Bars/Bar/Space3/Background"]
+margin_right = 80.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HBoxContainer/Bars/Bar/Space3/Background"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -10.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 10, 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "3"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedOutline" type="TextureRect" parent="HBoxContainer/Bars/Bar/Space3/Background"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.0
+margin_top = -41.0
+margin_right = 41.0
+margin_bottom = 41.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
